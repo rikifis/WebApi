@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Multi Game</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <div class="container body-content">
+        <h2>Multiplayer Game</h2><hr />
+        <div class="col-sm-4 form-horizontal">
+
+            <div class="form-group">
+                <label for="games" class="col-sm-2 control-label">Games</label>
+                <div class="col-sm-10">
+                    <select class="selectpicker form-control" id="games">
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                    <button class="btn btn-default" id="joinBtn">Join Game</button>
+                </div>
+            </div>
+
+            <h3>Start New Game</h3>
+
+            <div class="form-group">
+                <label for="mazeName" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="mazeName" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mazeRows" class="col-sm-2 control-label">Rows</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="mazeRows" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mazeCols" class="col-sm-2 control-label">Cols</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="mazeCols" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                    <button class="btn btn-default" id="startBtn">Start Game</button>
+                </div>
+            </div>           
+        </div>
+
+
+        <div class="col-sm-8 text-center">
+            <canvas id="myCanvas" tabindex="1" class="maze-board" width="500" height="500">MY BOARD</canvas>
+        </div>
+        <div class="col-sm-8 text-center">
+            <canvas id="otherCanvas" tabindex="2" class="maze-board" width="500" height="500">OTHER PLAYER'S BOARD</canvas>
+        </div>
+    </div>
+
+
+</body>
+</html>

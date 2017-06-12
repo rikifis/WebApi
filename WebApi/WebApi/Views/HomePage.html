@@ -6,18 +6,27 @@
     <title>Maze Game</title>
     
     <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="HomePage.css" rel="stylesheet" />
 </head>
 <body>
-    <link href="HomePage.css" rel="stylesheet" />
-    <script src="Scripts/jquery-3.2.1.js"></script>
-    <script src="Scripts/bootstrap.js"></script>
 
-    <div class="container body-content">
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    
+
+    <div id="navPlaceholder" src="Navbar.html"></div>
+    <script>
+        $(document).ready(function () {
+            $("#navPlaceholder").load("Navbar.html");
+        });
+    </script>
+
+<!--    <div class="container body-content">
         <h1>Welcome to the MAZE GAME</h1>
         <h3>Play for free.</h3>
         <h3>Play alone or with friends.</h3>
         <h3>HAVE FUN!</h3>
+</div>-->
 
-    </div>
 </body>
 </html>

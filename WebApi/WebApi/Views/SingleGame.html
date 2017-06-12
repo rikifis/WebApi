@@ -7,8 +7,15 @@
     <link href="../Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="Scripts/jquery-3.2.1.js"></script>
-    <script src="Scripts/bootstrap.js"></script>
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+
+    <div id="navPlaceholder" src="Navbar.html"></div>
+    <script>
+        $(document).ready(function () {
+            $("#navPlaceholder").load("Navbar.html");
+        });
+    </script>
 
     <div class="container body-content">
         <h2>Single Player Game</h2><hr />

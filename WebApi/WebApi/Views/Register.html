@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../Scripts/jquery-3.1.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+
+    <div id="navPlaceholder" src="Navbar.html"></div>
+    <script>
+        $(document).ready(function () {
+            $("#navPlaceholder").load("Navbar.html");
+        });
+    </script>
+
+    <div class="container body-content">
+        <h2>Register</h2><hr />
+        <div class="col-sm-4 form-horizontal">
+
+            <div class="form-group">
+                <label for="userName" class="col-sm-3 control-label">Username</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="userName" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="col-sm-3 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="password" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword" class="col-sm-6 control-label">Confirm your password</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="confirmPassword" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="email" />
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label"></label>
+                <div class="col-sm-10">
+                    <button class="btn btn-default" id="registerBtn">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

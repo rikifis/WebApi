@@ -1,7 +1,7 @@
 ﻿using System.Net.Sockets;
 using System.Threading;
 
-namespace Models
+namespace WebApi.Models
 {
     /// <summary>
     /// a multi player game.
@@ -11,11 +11,11 @@ namespace Models
         /// <summary>
         /// first player.
         /// </summary>
-        private TcpClient client1;
+        private User user1;
         /// <summary>
         /// second player.
         /// </summary>
-        private TcpClient client2;
+        private User user2;
         /// <summary>
         /// has 2 players.
         /// </summary>
@@ -30,9 +30,9 @@ namespace Models
         /// </summary>
         /// <param name="client">the first player.</param>
         /// <param name="name">name of the game.</param>
-        public MultiPlayerGame(TcpClient client, string name)
+        public MultiPlayerGame(User user, string name)
         {
-            client1 = client;
+            user1 = user;
             twoPlayers = false;
             Name = name;
         }
@@ -53,9 +53,9 @@ namespace Models
         /// set the second player.
         /// </summary>
         /// <param name="client">second player.</param>
-        public void SetSecondPlayer(TcpClient client)
+        public void SetSecondPlayer(User user)
         {
-            client2 = client;
+            user2 = user;
             twoPlayers = true;
         }
 
@@ -64,9 +64,9 @@ namespace Models
         /// </summary>
         /// <param name="player">the player to check</param>
         /// <returns>true if exists false otherwise</returns>
-        public bool IsPlayer(TcpClient player)
+        public bool IsPlayer(User user)
         {
-            if (player == client1 || player == client2)
+            if (user == user1 || user == user2)
             {
                 return true;
             }
@@ -78,16 +78,16 @@ namespace Models
         /// </summary>
         /// <param name="player1">the player that wants to get his opponent</param>
         /// <returns>get the opponent</returns>
-        public TcpClient GetOpponent(TcpClient player1)
+        public User GetOpponent(User player1)
         {
             // client2 is the opponent.
-            if (player1 == client1)
+            if (player1 == user1)
             {
-                return client2;
+                return user2;
             // client1 is the opponent.
-            } else if (player1 == client2)
+            } else if (player1 == user2)
             {
-                return client1;
+                return user1;
             }
             // player dosesn't exist.
             else

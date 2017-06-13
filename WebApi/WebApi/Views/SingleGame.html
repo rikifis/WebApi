@@ -67,6 +67,23 @@
         </div>
     </div>
 
+   <script>
+        var apiUrl = "../api/Maze/"
+        $("#startBtn").click(function () {
+            var name = $("#mazeName").val();
+            var rows = $("#mazeRows").val();
+            var cols = $("#mazeCols").val();
+            /*$.getJSON(apiUrl + "?name=" + name + "&rows=" + rows + "&cols=" + cols).done(function(data) {
+                document.write(data);
+                console.log(data);
+            });*/
+            $.getJSON(apiUrl).done(function (data) {
+                console.log("hello");
+                
+            });
+            
+        });
+    </script>
 
 </body>
 </html>

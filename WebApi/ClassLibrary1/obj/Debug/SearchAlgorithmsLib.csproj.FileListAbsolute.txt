@@ -1,0 +1,7 @@
+C:\Users\rikif\Source\Repos\WebApi\WebApi\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\rikif\Source\Repos\WebApi\WebApi\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\rikif\Source\Repos\WebApi\WebApi\ClassLibrary1\bin\Debug\Priority Queue.dll
+C:\Users\rikif\Source\Repos\WebApi\WebApi\ClassLibrary1\bin\Debug\Priority Queue.pdb
+C:\Users\rikif\Source\Repos\WebApi\WebApi\ClassLibrary1\bin\Debug\Priority Queue.xml
+C:\Users\rikif\Source\Repos\WebApi\WebApi\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\rikif\Source\Repos\WebApi\WebApi\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

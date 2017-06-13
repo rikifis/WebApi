@@ -51,3 +51,10 @@ C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
 C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
 C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\obj\Debug\WebApi.dll
 C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\obj\Debug\WebApi.pdb
+C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\bin\ClassLibrary1.dll
+C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\bin\MazeGeneratorLib.dll
+C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\bin\MazeLib.dll
+C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\bin\Priority Queue.dll
+C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\bin\ClassLibrary1.pdb
+C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\bin\Priority Queue.pdb
+C:\Users\rikif\Source\Repos\WebApi\WebApi\WebApi\bin\Priority Queue.xml

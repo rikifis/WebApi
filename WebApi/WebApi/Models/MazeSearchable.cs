@@ -2,7 +2,7 @@
 using MazeLib;
 using SearchAlgorithmsLib;
 
-namespace Models
+namespace WebApi.Models
 {
     /// <summary>
     /// MazeSearchable is a maze that we can search. 

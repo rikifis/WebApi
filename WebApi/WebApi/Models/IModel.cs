@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
 
-namespace Models
+namespace WebApi.Models
 {
     /// <summary>
     /// the interface of the maze model.
@@ -28,20 +28,20 @@ namespace Models
         /// <summary>
         /// start a multi player game.
         /// </summary>
-        /// <param name="client">the client that will be player1</param>
+        /// <param name="user">the client that will be player1</param>
         /// <param name="name">the name of the game</param>
         /// <param name="x">number of rows.</param>
         /// <param name="y">number off cols</param>
         /// <returns>returns the game maze</returns>
-        T Start(TcpClient client, string name, int x, int y);
+        T Start(User user, string name, int x, int y);
 
         /// <summary>
         /// join a game.
         /// </summary>
-        /// <param name="client">player2</param>
+        /// <param name="user">player2</param>
         /// <param name="name">name of game to join.</param>
         /// <returns>the game.</returns>
-        T Join(TcpClient client, string name);
+        T Join(User user, string name);
 
         /// <summary>
         /// list of games that are ready to join.
@@ -52,8 +52,8 @@ namespace Models
         /// <summary>
         /// get a multiplayer game.
         /// </summary>
-        /// <param name="player">the player</param>
+        /// <param name="user">the player</param>
         /// <returns>the game</returns>
-        MultiPlayerGame GetGame(TcpClient player);
+        MultiPlayerGame GetGame(User user);
     }
 }

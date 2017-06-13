@@ -5,9 +5,8 @@ using SearchAlgorithmsLib;
 using MazeGeneratorLib;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Net.Sockets;
 
-namespace Models
+namespace WebApi.Models
 {
     /// <summary>
     /// the maze mode.
@@ -169,12 +168,12 @@ namespace Models
         /// <summary>
         /// start a multi player game.
         /// </summary>
-        /// <param name="client">the client that will be player1</param>
+        /// <param name="user">the client that will be player1</param>
         /// <param name="name">the name of the game</param>
         /// <param name="x">number of rows.</param>
         /// <param name="y">number off cols</param>
         /// <returns>returns the game maze</returns>
-        public Maze Start(TcpClient client, string name, int x, int y)
+        public Maze Start(User user, string name, int x, int y)
         {
             // the game exist.
             if (toJoinMazes.ContainsKey(name))
@@ -189,7 +188,7 @@ namespace Models
             // add the game,
             toJoinMazes.Add(name, maze);
             // buils a muli player game.
-            MultiPlayerGame game = new MultiPlayerGame(client, name);
+            MultiPlayerGame game = new MultiPlayerGame(user, name);
             multiGames.Add(name, game);
             game.WaitForJoin();
             // we got another player.
@@ -199,10 +198,10 @@ namespace Models
         /// <summary>
         /// join a game.
         /// </summary>
-        /// <param name="client">player2</param>
+        /// <param name="user">player2</param>
         /// <param name="name">name of game to join.</param>
         /// <returns>the game.</returns>
-        public Maze Join(TcpClient client, string name)
+        public Maze Join(User user, string name)
         {
             if (!toJoinMazes.ContainsKey(name))
             {
@@ -214,7 +213,7 @@ namespace Models
             // remove from to join mazes.
             toJoinMazes.Remove(name);
             // set the second player.
-            multiGames[name].SetSecondPlayer(client);
+            multiGames[name].SetSecondPlayer(user);
             // return the game.
             return playingMazes[name];
         }
@@ -232,9 +231,9 @@ namespace Models
         /// <summary>
         /// get a multiplayer game.
         /// </summary>
-        /// <param name="player">the player</param>
+        /// <param name="user">the player</param>
         /// <returns>the game</returns>
-        public MultiPlayerGame GetGame(TcpClient player)
+        public MultiPlayerGame GetGame(User user)
         {
             MultiPlayerGame game = null;
             // go over the game
@@ -242,7 +241,7 @@ namespace Models
             {
                 game = multiGames.ElementAt(i).Value;
                 // check if that is the players game.
-                if (game.IsPlayer(player))
+                if (game.IsPlayer(user))
                 {
                     return game;
                 }
